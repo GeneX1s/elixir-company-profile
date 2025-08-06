@@ -1,98 +1,138 @@
-@extends('layouts.main')
+<!DOCTYPE html>
+<html lang="en-US">
+<!-- Mirrored from prium.github.io/elixir/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 21 Mar 2024 04:20:58 GMT -->
+<!-- Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
 
-@section('container')
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1"><!--  -->
+    <!--    Document Title-->
+    <!-- =============================================-->
+    <title>Elixir | Beautiful Site Template for Agencies &amp; Professionals</title><!--  -->
+    <!--    Favicons-->
+    <!--    =============================================-->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicons/favicon-16x16.png">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicons/favicon.ico">
+    <link rel="mask-icon" href="assets/images/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileImage" content="assets/images/favicons/mstile-150x150.png">
+    <meta name="theme-color" content="#ffffff"><!--  -->
+    <!--    Stylesheets-->
+    <!--    =============================================-->
+    <!-- Default stylesheets-->
+    <link href="assets/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"><!-- Template specific stylesheets-->
+    <link href="assets/lib/loaders.css/loaders.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700|Open+Sans:300,400,600,700,800"
+        rel="stylesheet">
+    <link href="assets/lib/iconsmind/iconsmind.css" rel="stylesheet">
+    <link href="../../code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
+    <link href="assets/lib/hamburgers/dist/hamburgers.min.css" rel="stylesheet">
+    <link href="assets/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Main stylesheet and color file-->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/custom.css" rel="stylesheet">
+</head>
 
-<style>
-  .php-email-form input,
-  .php-email-form textarea {
-    border-radius: 0;
-    box-shadow: none;
-    font-size: 14px;
-    background: #0c0b09;
-    border-color: #625b4b;
-    color: white;
-  }
-
-  .php-email-form input::-moz-placeholder,
-  .php-email-form textarea::-moz-placeholder {
-    color: #a49b89;
-  }
-
-  .php-email-form input::placeholder,
-  .php-email-form textarea::placeholder {
-    color: #a49b89;
-  }
-
-  .php-email-form input:focus,
-  .php-email-form textarea:focus {
-    border-color: #cda45e;
-  }
-
-  .php-email-form button[type=submit] {
-    background: #cda45e;
-    border: 0;
-    padding: 10px 35px;
-    color: #fff;
-    transition: 0.4s;
-    border-radius: 50px;
-  }
-
-  .php-email-form button[type=submit]:hover {
-    background: #d3af71;
-  }
-</style>
-
-<div class="row justify-content-center">
-  <div class="col-md-4">
-    @if(session()-> has('success'))
-    <div class="alert alert-success alert-dismissible fade show" role="alert">
-      {{session('success')}}
-      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-    </div>
-    @endif
-
-    @if(session()-> has('loginError'))
-    <div class="alert alert-danger alert-dismissible fade show" role="alert">
-      {{session('loginError')}}
-      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-    </div>
-    @endif
-    <br>
-    <br>
-    <main class="form-signin">
-      <h1 class="h3 mb-3 fw-normal">Please log in</h1>
-      <form action="/login" class="php-email-form" method="post">
-        @csrf
-        <div class="form-floating">
-          <input type="email" name="email" class="form-control @error('email') is-invalid @enderror" id="email"
-            placeholder="name@example.com" autofocus required value="{{ old ('email') }}">
-          <label for="email">Email address</label>
-          @error('email')
-          <div class="invalid-feedback">
-            {{ $message }}
-          </div>
-          @enderror
+<body data-spy="scroll" data-target=".inner-link" data-offset="60">
+    <main>
+        <div class="loading" id="preloader">
+            <div class="loader h-100 d-flex align-items-center justify-content-center">
+                <div class="line-scale">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
         </div>
-        <div class="form-floating">
-          <input type="password" name="password" class="form-control" id="password" placeholder="Password" required>
-          <label for="password">Password</label>
-        </div>
-        <br>
+        <section class="text-center py-0">
+            <div class="background-holder overlay overlay-2" style="background-image:url(assets/images/header-5.jpg);">
+            </div>
+            <!--/.background-holder-->
+            <div class="container">
+                <div class="row h-full align-items-center">
+                    <div class="col-md-8 col-lg-5 mx-auto" data-zanim-timeline="{}" data-zanim-trigger="scroll">
+                        <div data-zanim='{"delay":0}'><a href="/"><img src="assets/images/logo-light.png" alt="" /></a>
+                        </div>
+                        <div class="background-white radius-secondary p-4 p-md-5 mt-5" data-zanim='{"delay":0.1}'>
+                            <h4 class="text-uppercase fs-0 fs-md-1">login with elixir</h4>
+                            <form class="text-left mt-4" method="post">
+                                <div class="row align-items-center">
+                                    <div class="col-12">
+                                        <div class="input-group">
+                                            <div class="input-group-addon background-11 fs-2"><span
+                                                    class="ion-ios-person-outline"></span>
+                                            </div><input class="form-control" type="text"
+                                                placeholder="Email or username"
+                                                aria-label="Text input with dropdown button" />
+                                        </div>
+                                    </div>
+                                    <div class="col-12 mt-2 mt-sm-4">
+                                        <div class="input-group">
+                                            <div class="input-group-addon background-11 fs-2"><span
+                                                    class="ion-ios-locked-outline"></span>
+                                            </div><input class="form-control" type="Password" placeholder="Password"
+                                                aria-label="Text input with dropdown button" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row align-items-center mt-3">
+                                    <div class="col-6"><label class="form-check-label"><input class="form-check-input"
+                                                type="checkbox" /><span class="color-7">Remember Me</span></label></div>
+                                    <div class="col-6 mt-2 mt-sm-3"><button class="btn btn-primary btn-block"
+                                            type="submit">Login</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!--/.row-->
+            </div>
+            <!--/.container-->
+        </section>
+    </main><!--  -->
+    <!--    JavaScripts-->
+    <!--    =============================================-->
+    <script src="../../cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+    <script src="assets/lib/jquery/dist/jquery.min.js"></script>
+    <script src="../../cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
+        integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous">
+    </script>
+    <script src="assets/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="assets/lib/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/lib/gsap/src/minified/TweenMax.min.js"></script>
+    <script src="assets/lib/gsap/src/minified/plugins/ScrollToPlugin.min.js"></script>
+    <script src="assets/lib/CustomEase.min.js"></script>
+    <script src="assets/js/config.js"></script>
+    <script src="assets/js/zanimation.js"></script>
+    <script src="assets/js/inertia.js"></script><!-- Hotjar Tracking Code for http://markup.themewagon.com/tryelixir-->
+    <script>
+        (function(h,o,t,j,a,r){
+h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+h._hjSettings={hjid:710415,hjsv:6};
+a=o.getElementsByTagName('head')[0];
+r=o.createElement('script');r.async=1;
+r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+a.appendChild(r);
+})(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
 
-        <div class="btns">
-          <button class="btn-menu animated fadeInUp scrollto" type="submit">Login</button>
-        </div>
+    </script><!-- Global site tag (gtag.js) - Google Analytics-->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-76729372-5"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'UA-76729372-5');
 
-        <br>
-        {{-- <div class="btns">
-          <a href="#menu" class="btn-menu animated fadeInUp scrollto">Our Menu</a>
-          <a href="#book-a-table" class="btn-book animated fadeInUp scrollto">Book a Table</a>
-        </div> --}}
-      </form>
-      {{-- <small class="d-block text-center mt-3">Not Registered? <a href="/register">Register Now!</a></small> --}}
+    </script>
+    <script src="assets/js/core.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+<!-- Mirrored from prium.github.io/elixir/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 21 Mar 2024 04:20:58 GMT -->
 
-    </main>
-
-  </div>
-</div>
-@endsection
+</html>
