@@ -30,7 +30,7 @@
 </section>
 <div class="znav-white znav-container sticky-top navbar-elixir" id="znav-container">
     <div class="container">
-        <nav class="navbar navbar-expand-lg"><a class="navbar-brand overflow-hidden pr-3" href="index-2"><img
+        <nav class="navbar navbar-expand-lg"><a class="navbar-brand overflow-hidden pr-3" href="index2"><img
                     src="assets/images/logo-dark.png" alt="" /></a><button class="navbar-toggler" type="button"
                 data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
                 aria-expanded="false" aria-label="Toggle navigation">
