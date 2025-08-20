@@ -2,6 +2,14 @@
 
 @section('content')
 
+<style>
+    #map {
+        width: 100%;
+        height: 400px;
+        border-radius: 10px;
+    }
+</style>
+
 <section>
     <div>
         <div class="background-holder overlay"
@@ -54,15 +62,43 @@
             </div>
             <div class="col-12 mt-4">
                 <div class="background-white p-5 radius-secondary">
-                    <div class="googlemap" data-latlng="48.8583701,2.2922873,17" data-scrollwheel="false"
-                        data-icon="assets/images/map-marker.png" data-zoom="17" data-theme="Tripitty">
-                        <div class="marker-content py-3">
-                            <h5>Eiffel Tower</h5>
-                            <p>Gustave Eiffel's iconic, wrought-iron 1889 tower,<br> with steps and elevators to
-                                observation decks.</p>
-                        </div>
-                    </div>
+                    <div id="map"></div>
                 </div>
+
+                <script>
+                    // Coordinates for Eiffel Tower
+    var lat = 48.8583701;
+    var lng = 2.2922873;
+
+    // Initialize Leaflet map
+    var map = L.map('map').setView([lat, lng], 17);
+
+    // OpenStreetMap tile layer (free and no API key required)
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    // Custom icon (replace with your asset path if needed)
+    var customIcon = L.icon({
+        iconUrl: 'assets/images/map-marker.png',
+        iconSize: [38, 50], // adjust based on your image
+        iconAnchor: [19, 50],
+        popupAnchor: [0, -50]
+    });
+
+    // Add marker with popup
+    L.marker([lat, lng], { icon: customIcon }).addTo(map)
+        .bindPopup(
+            `<div class="marker-content py-3">
+                <h5>Eiffel Tower</h5>
+                <p>Gustave Eiffel's iconic, wrought-iron 1889 tower,<br>
+                with steps and elevators to observation decks.</p>
+            </div>`
+        )
+        .openPopup();
+                </script>
+
             </div>
             <div class="col-12 mt-4">
                 <div class="background-white p-5 h-100 radius-secondary">

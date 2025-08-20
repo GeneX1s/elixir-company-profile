@@ -25,7 +25,8 @@
 
     <!--    Stylesheets-->
     <!--    =============================================-->
-    <link href="../../assets/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"><!-- Template specific stylesheets-->
+    <link href="../../assets/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Template specific stylesheets-->
     <link href="../../assets/lib/loaders.css/loaders.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700|Open+Sans:300,400,600,700,800"
         rel="stylesheet">
@@ -38,7 +39,11 @@
     <link href="../../assets/lib/remodal/dist/remodal.css" rel="stylesheet">
     <link href="../../assets/lib/remodal/dist/remodal-default-theme.css" rel="stylesheet">
     <link href="../../assets/lib/flexslider/flexslider.css" rel="stylesheet">
-    <link href="../../assets/lib/lightbox2/dist/css/lightbox.css" rel="stylesheet"><!-- Main stylesheet and color file-->
+    <link href="../../assets/lib/lightbox2/dist/css/lightbox.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <!-- Main stylesheet and color file-->
     <link href="../../assets/css/style.css" rel="stylesheet">
     <link href="../../assets/css/custom.css" rel="stylesheet">
 </head>
@@ -66,7 +71,8 @@
     <script src="../../assets/lib/CustomEase.min.js"></script>
     <script src="../../assets/js/config.js"></script>
     <script src="../../assets/js/zanimation.js"></script>
-    <script src="../../assets/js/inertia.js"></script><!-- Hotjar Tracking Code for http://markup.themewagon.com/tryelixir-->
+    <script src="../../assets/js/inertia.js"></script>
+    <!-- Hotjar Tracking Code for http://markup.themewagon.com/tryelixir-->
     <script>
         (function (h, o, t, j, a, r) {
             h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
@@ -90,6 +96,10 @@
     <script src="../../assets/lib/remodal/dist/remodal.js"></script>
     <script src="../../assets/lib/lightbox2/dist/js/lightbox.js"></script>
     <script src="../../assets/lib/flexslider/jquery.flexslider-min.js"></script>
+    <script src="assets/js/googlemap.js"></script>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyARdVcREeBK44lIWnv5-iPijKqvlSAVwbw&amp;callback=initMap"
+        async></script>
     <script src="../../assets/js/core.js"></script>
     <script src="../../assets/js/main.js"></script>
 </body>
